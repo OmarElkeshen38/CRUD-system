@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="w-75 m-auto py-4">
+                <h2 class="text-danger text-center fw-bold fs-1">CRUD SYSTEM</h2>
+                <div class="name">
+                    <label class="fw-bold" for="">Product Name</label>
+                    <input type="text" id="ProductNameInp" class="form-control">
+                    <p id="prgName"></p>
+                </div>
+                
+                <label class="fw-bold" for="">Product Price</label>
+                <input type="text" id="ProductPriceInp" class="form-control">
+                <p id="prgPrice"></p>
+
+                <label class="fw-bold" for="">Product Category</label>
+                <input type="text" id="ProductCategoryInp" class="form-control">
+
+                <label class="fw-bold" for="">Product Description</label>
+                <textarea id="ProductDecInp" cols="30" rows="5" class="form-control"></textarea>
+
+                <button onclick="addProduct()" class="btn btn-info mt-2">Add Product</button>
+                <button onclick="clearForm()" class="btn btn-info mt-2">Reast</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="w-75 mx-auto">
+                <input onkeyup="search(this.value)" type="text" class="form-control" placeholder="Search By Name ...">
+            </div>
+        </div>
+        <div class="container">
+            <div class="my-4 m-auto">
+                <table class="table table-striped">
+                    <thead>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category</th>
+                        <th>Descraption</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody id="myTable">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
